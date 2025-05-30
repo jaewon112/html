@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 캐스케이딩 적용 */
+        /* 캐스케이딩 적용 -> 계단식으로 적용되어 마지막 입력코드가 적용*/
         * {
             font-style: italic;
         }
+        /* <p style="color: blue; font-size: 20px;">내용2</p> */
         p {
             color:blue !important; 
             font-size: 20px;
@@ -44,10 +45,10 @@
 <body>
     <h1 style="color: #ff0000f3; font-size: 40px;">제목</h1>
     <div>내용1</div>
-    <!-- <p style="color: blue; font-size: 20px;">내용2</p> -->
+    
     <p>내용2-1</p>
     <p id="p">내용2-2</p>
-    <!-- 우선순위는 type -> class -> id -->
+    <!-- 우선순위는 id -> class -> type -->
     <p class="p" id="p">내용2-4</p> 
     <p>
         <span>

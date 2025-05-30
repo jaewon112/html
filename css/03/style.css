@@ -22,7 +22,7 @@
     margin: 2rem;
     border: 0.1rem solid #000;
     /* line-height -> 텍스트가 있을 때 증가 */
-    line-height: 2rem;
+    line-height: 1rem;
 }
 
  .login-container {

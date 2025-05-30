@@ -1,0 +1,139 @@
+html {
+    font-size: 62.5%;
+    background-color: #fafafa;
+}
+/* 인접형제 + 는 바로 옆 대상에만 적용가능 
+   형제선택자 ~ */
+div > h1 + p {
+    color: red;
+}
+
+.buttons {
+    & > div {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        /* 값이 늘어나는걸 대비해서 값을 따로입력하지않고 fit-content로 설정*/
+        width: fit-content;
+        cursor: pointer;
+        /* 마우스를 해당위치에 가져다놓았을때의 설정 */
+        &:hover {
+            background-color: #fafafa;
+        }
+        /* 마우스를 해당위치에 클릭했을때의 설정 */
+        &:active{
+            background-color: #eee;
+        }
+    }
+
+    & > a {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        /* 값이 늘어나는걸 대비해서 값을 따로입력하지않고 fit-content로 설정*/
+        width: fit-content;
+        cursor: pointer;
+        color: #222;
+        text-decoration: none;
+        &:hover {
+            background-color: #fafade;
+        }
+        
+        &:active{
+            background-color: #eee;
+        }
+    }
+    /* 버튼은 속성값을 변경하면 기존의 button기능 상실 */
+    & > button {
+        box-sizing: border-box;
+        border: 0.1rem solid #dbdbdb;
+        border-radius: 0.4rem;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:active{
+            background-color: #eee;
+        }
+        /* disabled 로 설정했을때 값 적용 */
+        &:disabled{
+            background-color: red;
+            cursor: default;
+        }
+    }
+}
+
+#button2:target {
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+}
+
+
+.check > input[type=checkbox] + label {
+    color: blue;
+}
+/* :checked < 클릭했을때 라는 해석 */
+.check > input[type=checkbox]:checked + label {
+    color: red;
+}
+
+.check > input[type=radio] + label {
+    color: red;
+}
+
+.check > input[type=radio]:checked + label {
+    color: blue;
+}
+
+
+.not > input:not(#text2) {
+    background-color: green;
+}
+
+
+.menu-list {
+    & > li {
+        position: relative;
+        border: 0.1rem solid #dbdbdb;
+        width: fit-content;
+        cursor: pointer;
+
+        & > div {
+            display: none;
+
+        }
+
+        &:active > div {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -22rem;
+            background-color: yellow;
+            width: 20rem;
+        }
+    }
+}
+/* ()에 연산자 사용가능 */
+.menu-list2 li:nth-of-type(3n-1){
+    color: brown;
+}
+
+.menu-list2 > li::before {
+    content: "menu ";
+    border: 0.1rem solid #dbdbdb;
+    color: pink;
+}
+
+.menu-list2 > li::after {
+    content: " ->";
+}

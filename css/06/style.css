@@ -1,0 +1,14 @@
+.background-container {
+    background-image: url(../../html/바탕화면원본.jpg);
+    background-position: center center;
+    background-size: contain;
+    /* repeat : 반복처리 */
+    background-repeat: no-repeat;
+    /* 
+        attachment : 배경 이미지 고정 속성 
+        fixed -> 이미지 고정
+        scroll -> 스크롤 내리면 따라 내려감 (기본값) 
+    */
+    background-attachment: fixed;
+    height: 1080px;
+}

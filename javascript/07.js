@@ -30,8 +30,8 @@ function printStudentInfo({ name, address: addr, age }) {
     console.log(name);
     console.log(addr);
     console.log(age);
-
 }
+
 printStudentInfo(student);
 
 /**객체 구조분해할 때 주의사항
@@ -51,7 +51,7 @@ const s2 = {
 // const {name, age} = s2;
 const {name: n1, age: a1} = s2;
 const {name: n2, age: a2} = s2;
-
+console.log('s2:', s2);
 // 배열 비구조할당
 const numbers = [1, 2, 3, 4, 5];
 const [num1, num2, num3] = numbers;
@@ -59,8 +59,6 @@ console.log(num1);
 console.log(num2);
 console.log(num3);
 
-
-// 오늘 할 일 2
 const useState = data => {
     const dataState = {
         data: data,

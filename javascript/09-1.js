@@ -41,6 +41,7 @@ function thenFx1(result) {
     console.log("thenFx1(result):", result)
     return 200;
 }
+
 function thenFx2(result) {
     console.log(4);
     console.log("thenFx2(result):", result)
@@ -59,7 +60,6 @@ console.log("-2-");
 const p3 = p1.then(thenFx2);
 console.log("-3-");
 const e1 = p3.catch(error => console.error(error));
-const p4 = new Promise(promiseFx);
 console.log("-4-");
 const p5 = p4.then(thenFx1);
 console.log("-5-");

@@ -19,6 +19,7 @@ async function main() {
     let r1 = await fx1(true);
     console.log(r1);
 }
+
 async function main() {
     let r1 = null
     fx1(false).then(result => r1 = result)
@@ -26,7 +27,7 @@ async function main() {
     .catch(error => console.error(error)));
     try{
         let r2 = await fx1(false);
-        console.log(r2)
+        console.log(r2);
     }catch(error) {
         console.error(error);
     }

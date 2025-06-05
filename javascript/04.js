@@ -25,7 +25,7 @@ const obj1 = {key1: "value1", key2: "value2"};
 const obj2 = {key1: "value1", key2: "value2"};
 console.log(obj1 === obj2);
 
-/* JSON  <(오늘 할 일 : 이색기 이해하기)*/ 
+/* JSON  */ 
 // JS 객체 또는 배열을 JSON 문자열로 변환 JSON.stringify();
 // JSON 문자열을 JS객체 또는 배열로 변환 JSON.parse(); 
 const json1 = JSON.stringify(arr1);

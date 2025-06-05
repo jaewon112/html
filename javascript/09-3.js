@@ -19,7 +19,7 @@ function getUserById(id) {
     });
 }
 
-let user1 = await getUserById(1); // -> await getUserById(1) 은
+let user1 = await getUserById(1); 
 console.log("!!!!!", user1);
 
 let user2 = getUserById(1);
@@ -27,6 +27,7 @@ console.log("!!!!!", user2);
 
 getUserById(1)
 .then(result => user1 = result)
+.then(console.log(user1))
 .catch(error => console.error(error));
 getUserById(5)
 .then(result => console.log(result))

@@ -6,10 +6,10 @@ const student = {
 }
 
 //비구조 할당
-const { name, address } = student; 
+const { name, address } = student;
 console.log(name,address);
 
-//REST 문법
+// REST 문법
 // const { age, phone, ...rest } = student;
 // console.log(age, phone, rest);
 const { age, phone, ...a } = student;

@@ -15,6 +15,18 @@ async function registerStudentRequest() {
     try {
         const requestURL = "http://localhost:8080/api/js/students"
         const requestBody = JSON.stringify(studentInputValues);
+        // fetch(requestURL, {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: requestBody
+        // })
+        // .then((response) => response.json())
+        // .then((responseJson) => {
+        //     console.log(responseJson)
+        // });
+        
         const response = await fetch(requestURL, {
             method: "POST",
             headers: {
